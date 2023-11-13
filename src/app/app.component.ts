@@ -192,11 +192,15 @@ const reviews: TReview[] = [
   },
 ];
 
+const shuffledReviews = (array: TReviews[]) => { 
+    return array.sort(() => Math.random() - 0.5); 
+}; 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  reviews = reviews;
+  reviews = shuffledReviews;
 }
