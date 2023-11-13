@@ -192,7 +192,7 @@ const reviews: TReview[] = [
   },
 ];
 
-const shuffledReviews = (array: TReviews[]) => { 
+const shuffledReviews = (array: TReview[]) => { 
     return array.sort(() => Math.random() - 0.5); 
 }; 
 
