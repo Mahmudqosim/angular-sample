@@ -1,0 +1,24 @@
+<div class="reviews">
+  <div class="review" *ngFor="let review of reviews">
+    <div class="review-summary">
+      <div>
+        <app-rate-stars [value]="review.rating"></app-rate-stars>
+        {{ review.rating }}
+      </div>
+      <h4>{{ review.name }}</h4>
+    </div>
+
+    <h5 class="review-title">
+      {{ review.reviewTitle }}
+    </h5>
+
+    <p class="review-comment">
+      {{ review.reviewComment }}
+    </p>
+
+    <div class="review-metadata">
+      <span>{{ review.dateOfReview }}</span>
+      <span [class]="'badge ' + review.type">{{ review.type }}</span>
+    </div>
+  </div>
+</div>

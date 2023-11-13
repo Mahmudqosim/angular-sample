@@ -1,0 +1,31 @@
+<div class="user-ratings">
+  <div class="freelancerratings">
+    <h3>Ajala Victor's ratings</h3>
+
+    <div class="freelancerratings-box">
+      <div class="freelancerratings-total">
+        <app-rate-stars [value]=reviewsTotalRating></app-rate-stars>
+        <p>{{ reviewsTotalRating }} out of 5</p>
+      </div>
+
+      <p>{{ reviews.length }} ratings</p>
+    </div>
+
+    <div class="freelancerratings-gaugebox">
+      <div class="gaugebox" *ngFor="let gauge of [5, 4, 3, 2, 1]">
+        <span class="gaugestar"
+          >{{ gauge }} <img src="../../assets/svgs/star.svg" alt="star"
+        /></span>
+
+        <div class="gauge-bar-container">
+          <div
+            [style.width]="(ratingsGauge[gauge] / reviews.length) * 100 + '%'"
+          ></div>
+        </div>
+
+        <span>{{ (ratingsGauge[gauge] / reviews.length) * 100 }}%</span>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,18 @@
+<span class="stars" *ngFor="let num of [1, 2, 3, 4, 5]">
+  <img
+    *ngIf="num - value === 1; else half"
+    src="../../assets/svgs/empty-star.svg"
+    alt="star"
+    class="empty-star"
+  />
+  <ng-template #half>
+    <img
+      *ngIf="value > num - 0.5"
+      src="../../assets/svgs/star.svg"
+      alt="star" />
+    <img
+      *ngIf="value < num - 0.5"
+      src="../../assets/svgs/half-star.svg"
+      alt="half-star"
+  /></ng-template>
+</span>

@@ -1,1 +1,110 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Poppins;
+  src: url(/assets/fonts/Poppins-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(/assets/fonts/Poppins-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(/assets/fonts/Poppins-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(/assets/fonts/Poppins-Bold.ttf);
+  font-weight: 700;
+}
+
+* {
+  font-family: "Poppins", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html {
+  font-size: 12px;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media screen and (min-width: 350px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1rem;
+
+  --main-color: #46b174;
+  --bg-color: #eff3f6;
+  --text-color: #000;
+  --white-color: #fff;
+  --yellow-color: #f4a825;
+  --yellow-t-color: rgba(245, 169, 38, 0);
+
+  --bezier: cubic-bezier(0.42, 0, 0.58, 1);
+  --trans-dur: 0.3s;
+
+  --box-shadow-basic: 0 0 5px rgba($color: #333, $alpha: 0.1);
+  --box-shadow-category: 0 0 7px rgba($color: #000000, $alpha: 0.1);
+
+  background: var(--bg-color);
+  color: var(--text-color);
+
+  font-weight: 400;
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
+
+input,
+button,
+textarea {
+  outline: none;
+  border: none;
+  font-family: "Poppins";
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

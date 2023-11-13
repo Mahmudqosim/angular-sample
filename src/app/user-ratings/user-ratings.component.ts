@@ -1,15 +1,6 @@
 import { Component } from '@angular/core';
 
-type TReview = {
-  name: string;
-  reviewTitle?: string | null;
-  reviewComment?: string | null;
-  rating: number;
-  dateOfReview: string;
-  type: 'client' | 'freelancer';
-};
-
-const reviews: TReview[] = [
+const reviews = [
   {
     name: 'Liam Osei',
     reviewTitle: 'Exceptional Logo Design!',
@@ -193,10 +184,26 @@ const reviews: TReview[] = [
 ];
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-user-ratings',
+  templateUrl: './user-ratings.component.html',
+  styleUrls: ['./user-ratings.component.scss'],
 })
-export class AppComponent {
+export class UserRatingsComponent {
   reviews = reviews;
+
+  reviewsTotalRating =
+    reviews.reduce((acc, next) => acc + next.rating, 0) / reviews.length;
+
+  ratingsGauge = reviews.reduce(
+    (acc, next) => {
+      let clone = { ...acc };
+
+      clone[next.rating] = clone[next.rating] + 1;
+
+      console.log(clone);
+
+      return clone;
+    },
+    { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 }
+  )
 }

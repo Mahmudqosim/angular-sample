@@ -1,0 +1,10 @@
+.stars {
+  & img {
+    height: 1rem;
+  }
+
+  & .empty-star {
+    height: 1.25rem;
+    margin-bottom: -.15rem;
+  }
+}

@@ -1,0 +1,58 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+  background: var(--white-color);
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  padding: 1rem;
+
+  border-bottom: 1px solid #ccc;
+
+  &-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & h4 {
+      color: #444;
+    }
+  }
+
+  &-title {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  &-comment {
+    font-size: 0.875rem;
+    color: #666;
+  }
+
+  &-metadata {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: #777;
+
+    & .badge {
+      &.client {
+        background: var(--main-color);
+        padding: .25rem .75rem;
+        border-radius: 50px;
+        color: #fff;
+      }
+      &.freelancer {
+        background: var(--text-color);
+        padding: .25rem .75rem;
+        border-radius: 50px;
+        color: #fff;
+      }
+    }
+  }
+}
